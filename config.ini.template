@@ -1,0 +1,4 @@
+SCRIPTDIR="/mnt/HD/HD_a2/scripts"
+FILEDIR=$SCRIPTDIR/"files"
+DOWNLOADDIR="/mnt/HD/HD_a2/Downloads/TVShows"
+SLACK_HOOK="https://hooks.slack.com/services/..."
