@@ -1,4 +1,4 @@
-SCRIPTDIR="/mnt/HD/HD_a2/scripts"
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 FILEDIR=$SCRIPTDIR/"files"
 DOWNLOADDIR="/mnt/HD/HD_a2/Downloads/TVShows"
 SLACK_HOOK="https://hooks.slack.com/services/..."

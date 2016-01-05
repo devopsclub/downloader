@@ -1,5 +1,7 @@
 #!/ffp/bin/bash
-source config.ini
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $DIR/config.ini
 
 while read -r SHOWNAME SHOWLINK WHATTODO; do
 	cp $FILEDIR/$SHOWNAME".files" $FILEDIR/$SHOWNAME."old"
