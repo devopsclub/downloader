@@ -7,6 +7,7 @@ while read -r SHOWNAME SHOWLINK WHATTODO; do
 	cp $FILEDIR/$SHOWNAME".files" $FILEDIR/$SHOWNAME."old"
 	sleep 5
 	wget "$SHOWLINK" -O $FILEDIR/$SHOWNAME".files"
+	dos2unix -u $FILEDIR/$SHOWNAME".files"
 	cat $FILEDIR/$SHOWNAME".files" | awk -F '/' '{print $7}' > $FILEDIR"/tmp.files"
 	cat $FILEDIR/$SHOWNAME".old" | awk -F '/' '{print $7}' > $FILEDIR"/tmp.old"
 	comm -23 $FILEDIR/"tmp.files" $FILEDIR/"tmp.old" >> $FILEDIR/"tmp.email"
