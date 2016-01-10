@@ -22,7 +22,7 @@ if [ -e $FILEDIR/"tmp.email" ]; then
 	if [ $EMAILLINES -gt 0 ]; then
 		cat $FILEDIR/"tmp.email" | tr '\n' '!' | sed 's:!:\\n:g' > $FILEDIR/"tmp.email2"
 		sleep 10
-		curl --retry 3 -X POST --data-urlencode 'payload={"text": "New files are here!\n'$(cat $FILEDIR/"tmp.email2")'", "channel": "#general", "username": "DNS-320 bot", "icon_emoji": ":space_invader:"}' $SLACK_HOOK -k
+		curl --retry 3 -X POST --data-urlencode 'payload={"text": "New files are here!\n'$(cat $FILEDIR/"tmp.email2")'", "channel": "#general", "username": "DNS-320 downloader", "icon_emoji": ":space_invader:"}' $SLACK_HOOK -k
 		sleep 10
 	fi
 fi
